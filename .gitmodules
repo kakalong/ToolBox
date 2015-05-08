@@ -1,0 +1,3 @@
+[submodule "LuaJIT_mobile/luajit"]
+	path = LuaJIT_mobile/luajit
+	url = http://luajit.org/git/luajit-2.0.git
