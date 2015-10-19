@@ -19,17 +19,17 @@ else
 ISDKP=$ISDK/usr/bin/
 fi
 
-if [ ! -e $ISDKP/ar ]; then 
-  sudo cp $ISDK/usr/bin/ar $ISDKP
-fi
+# if [ ! -e $ISDKP/ar ]; then 
+#   sudo cp $ISDK/usr/bin/ar $ISDKP
+# fi
 
-if [ ! -e $ISDKP/ranlib ]; then
-  sudo cp $ISDK/usr/bin/ranlib $ISDKP
-fi
+# if [ ! -e $ISDKP/ranlib ]; then
+#   sudo cp $ISDK/usr/bin/ranlib $ISDKP
+# fi
 
-if [ ! -e $ISDKP/strip ]; then
-  sudo cp $ISDK/usr/bin/strip $ISDKP
-fi
+# if [ ! -e $ISDKP/strip ]; then
+#   sudo cp $ISDK/usr/bin/strip $ISDKP
+# fi
 
 rm -rf "$DESTDIR"
 mkdir "$DESTDIR"
