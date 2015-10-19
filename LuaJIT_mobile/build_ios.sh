@@ -58,7 +58,11 @@ mv "$SRCDIR"/libluajit.a "$DESTDIR"/libluajit-armv7s.a
 
 make clean
 ISDKF="-arch arm64 -isysroot $ISDK/SDKs/$ISDKVER"
-make HOST_CC="gcc " CROSS="$ISDKP" TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS
+if [[ $ABOVE_VERSION -eq 1 ]]; then
+make HOST_CC="gcc " TARGET_FLAGS="$ISDKF" TARGET=arm64 TARGET_SYS=iOS
+else
+make HOST_CC="gcc " CROSS=$ISDKP TARGET_FLAGS="$ISDKF" TARGET_SYS=iOS
+fi
 mv "$SRCDIR"/libluajit.a "$DESTDIR"/libluajit-arm64.a
 
 
