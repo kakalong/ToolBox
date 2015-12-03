@@ -41,12 +41,12 @@ mv "$SRCDIR"/libluajit.a "$DESTDIR"/libluajit-arm64.a
 
 # Build This Only For iOS Simulator
 make clean
-ISDKF="-arch i386 -mios-simulator-version-min=$BUNDLE_ID -isysroot $ISIMSDK/SDKs/$ISIMSDKVER"
+ISDKF="-arch i386 -mios-simulator-version-min=6.0 -isysroot $ISIMSDK/SDKs/$ISIMSDKVER"
 make HOST_CC="gcc -m32 -arch i386" TARGET_FLAGS="$ISDKF" TARGET=i386 TARGET_SYS=iOS
 mv "$SRCDIR"/libluajit.a "$DESTDIR"/libluajit-i386.a
 
 make clean
-ISDKF="-arch x86_64 -mios-simulator-version-min=$BUNDLE_ID -isysroot $ISIMSDK/SDKs/$ISIMSDKVER"
+ISDKF="-arch x86_64 -mios-simulator-version-min=6.0 -isysroot $ISIMSDK/SDKs/$ISIMSDKVER"
 make HOST_CC="gcc -m64 -arch x86_64" TARGET_FLAGS="$ISDKF" TARGET=x86_64 TARGET_SYS=iOS
 mv "$SRCDIR"/libluajit.a "$DESTDIR"/libluajit-x86_64.a
 # Build for iOS Simulator End
