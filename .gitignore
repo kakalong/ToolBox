@@ -29,3 +29,6 @@
 
 # Build
 prebuilt/
+
+# Mac Index
+.DS_Store
